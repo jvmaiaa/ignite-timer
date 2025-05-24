@@ -1,3 +1,5 @@
+import { styled } from 'styled-components';
+
 export type ButtonVariant = 'primary' | 'secondary' | 'danger';
 
 interface ButtonContainerProps {

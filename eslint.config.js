@@ -27,6 +27,8 @@ export default tseslint.config(
       'semi' : ['error', 'always'],
       // Sempre usar aspas simples
       'quotes' : ['error', 'single'],
+      // Adiciona o Prettier como regra do ESLint
+      'prettier/prettier': 'error',
     },
   },
 )

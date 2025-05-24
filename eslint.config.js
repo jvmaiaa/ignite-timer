@@ -23,6 +23,10 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      // Sempre usar ponto e vírgula
+      'semi' : ['error', 'always'],
+      // Sempre usar aspas simples
+      'quotes' : ['error', 'single'],
     },
   },
 )

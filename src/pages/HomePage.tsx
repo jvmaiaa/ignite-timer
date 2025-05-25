@@ -1,5 +1,5 @@
 // prettier-ignore
-export const Home = () => {
+export const HomePage = () => {
   return (
     <h1>Home</h1>
   );

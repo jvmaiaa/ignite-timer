@@ -8,6 +8,7 @@ export const LayoutContainer = styled.div`
 
   background-color: ${({ theme }) => theme['gray-800']};
   border-radius: 8px;
+  
   display: flex;
   flex-direction: column;
 `;

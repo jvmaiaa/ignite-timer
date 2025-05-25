@@ -1,14 +1,21 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 import { History } from '../pages/History';
-import { HomePage } from '../pages/HomePage';
 
 export const Router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <DefaultLayout />, // Contaúdo carregado para todas as rotas
+    // implementar tatramento de erro global
+    children: [
+      {
+        path: '/history',
+        element: <History />,
+      },
+      {
+        path: '*',
+        element: <div>Página não encontrada</div>
+      },
+    ],
   },
-  {
-    path: '/history',
-    element: <History />,
-  }
 ]);

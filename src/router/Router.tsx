@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { DefaultLayout } from '../layouts/DefaultLayout';
-import { History } from '../pages/History';
+import { History } from '../pages/History/History';
+import { Home } from '../pages/Home';
 
 export const Router = createBrowserRouter([
   {
@@ -8,6 +9,10 @@ export const Router = createBrowserRouter([
     element: <DefaultLayout />, // Contaúdo carregado para todas as rotas
     // implementar tatramento de erro global
     children: [
+      {
+        index: true, // Esta rota será usada para o caminho "/"
+        element: <Home />,
+      },
       {
         path: '/history',
         element: <History />,

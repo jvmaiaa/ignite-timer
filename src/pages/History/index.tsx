@@ -2,6 +2,7 @@ import { HistoryContainer, HistoryList, Status } from './styles';
 
 // prettier-ignore
 export const History = () => {
+
   return (
     <HistoryContainer>
       <h1>Meu histórico</h1>

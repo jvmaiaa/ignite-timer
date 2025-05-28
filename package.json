@@ -11,13 +11,15 @@
     "errors": "eslint src"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
     "ignite-timer": "file:",
     "phosphor-react": "^1.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.4",
     "react-router-dom": "^6.26.0",
-    "styled-components": "^6.1.18"
+    "styled-components": "^6.1.18",
+    "zod": "^3.25.32"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

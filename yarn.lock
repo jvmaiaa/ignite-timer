@@ -393,7 +393,7 @@
 
 "@hookform/resolvers@^5.0.1":
   version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-5.0.1.tgz#0a5e90310149e3ac5b017efcb5beb9bdbb711f38"
+  resolved "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-5.0.1.tgz"
   integrity sha512-u/+Jp83luQNx9AdyW2fIPGY6Y7NG68eN2ZW8FOJYL+M0i4s49+refdJdOp/A9n9HFQtQs3HIDHQvX3ZET2o7YA==
   dependencies:
     "@standard-schema/utils" "^0.3.0"
@@ -634,7 +634,7 @@
 
 "@standard-schema/utils@^0.3.0":
   version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@standard-schema/utils/-/utils-0.3.0.tgz#3d5e608f16c2390c10528e98e59aef6bf73cae7b"
+  resolved "https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz"
   integrity sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==
 
 "@types/babel__core@^7.20.5":
@@ -2115,7 +2115,8 @@ hoist-non-react-statics@^3.3.0:
 "ignite-timer@file:.":
   version "0.0.0"
   dependencies:
-    ignite-timer "file:../../Users/joaov/AppData/Local/Yarn/Cache/v6/npm-ignite-timer-0.0.0-9a8f792a-0a4e-4776-ac16-eb0e4bcadead-1748417507630/node_modules/ignite-timer"
+    "@hookform/resolvers" "^5.0.1"
+    ignite-timer "file:../../Users/joaov/AppData/Local/Yarn/Cache/v6/npm-ignite-timer-0.0.0-ebd8b291-33da-4984-9c22-27d2b20541e9-1748580510687/node_modules/ignite-timer"
     phosphor-react "^1.4.1"
     react "^19.1.0"
     react-dom "^19.1.0"
@@ -3420,6 +3421,6 @@ yocto-queue@^0.1.0:
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
 zod@^3.25.32:
-  version "3.25.32"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.32.tgz#769cc684072df780fc8f38130b0cd9283a8d3818"
-  integrity sha512-OSm2xTIRfW8CV5/QKgngwmQW/8aPfGdaQFlrGoErlgg/Epm7cjb6K6VEyExfe65a3VybUOnu381edLb0dfJl0g==
+  version "3.25.41"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.25.41.tgz"
+  integrity sha512-8+sDJTGtCYIDBhdqDygp0ffj8kzziRKqAJPhpYObbElJ+3TRe/mnlnwH+/OMa3kKhueS4Drm5UMW00/u1p07zA==

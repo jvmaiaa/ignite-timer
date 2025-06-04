@@ -22,7 +22,7 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: ${({ theme}) => theme['gray-100']};
+  color: ${({ theme }) => theme['gray-100']};
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
@@ -86,7 +86,7 @@ export const Separator = styled.div`
   justify-content: center;
 `;
 
-export const StartCountDownButton = styled.button`
+export const BaseCountDownButton = styled.button`
   width: 100%;
   border: 0;
   padding: 1rem;
@@ -95,21 +95,33 @@ export const StartCountDownButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme }) => theme['gray-100']};
 
   gap: 0.5rem;
   font-weight: bold;
 
   cursor: pointer;
-  background: ${({ theme }) => theme['green-500']};
-  color: ${({ theme }) => theme['gray-100']};
   
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed; // deixa o cursor em forma de proibido
   }
+`;
+
+export const StartCountDownButton = styled(BaseCountDownButton)`
+  background: ${({ theme }) => theme['green-500']};
+  
   
   &:not(:disabled):hover {
-    background-color: ${({theme}) => theme['green-700']};
+    background-color: ${({ theme }) => theme['green-700']};
   }
+`;
 
+
+export const StopCountDownButton = styled(BaseCountDownButton)`
+  background: ${({ theme }) => theme['red-500']};
+  
+  &:not(:disabled):hover {
+    background-color: ${({ theme }) => theme['red-700']};
+  }
 `;

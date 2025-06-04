@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
+    "date-fns": "^4.1.0",
     "ignite-timer": "file:",
     "phosphor-react": "^1.4.1",
     "react": "^19.1.0",

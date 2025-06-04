@@ -20,11 +20,12 @@ interface Cycle {
   task: string;
   minutesAmount: number;
   startDate: Date;
+  interruptedDate?: Date;
 }
 
 export const Home = () => {
 
-  const [cycles, setCycle] = useState<Cycle[]>([]);
+  const [cycles, setCycles] = useState<Cycle[]>([]);
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
   const [amountSecondsPassed, setAmountSecondsPassed] = useState<number>(0);
 
@@ -65,7 +66,7 @@ export const Home = () => {
     };
 
     // atualiza a lista, adicionando o novo valor
-    setCycle((currentState) => [...currentState, newCycle]);
+    setCycles((currentState) => [...currentState, newCycle]);
     // Poderia ser feito da forma abaixo: 
     // setCycle([...cycles, newCycle]);
     setActiveCycleId(id);
@@ -73,6 +74,20 @@ export const Home = () => {
 
     // limpa o campo
     reset();
+  }
+
+  function handleInterruptCycle() {
+    // interreompendo o ciclo ativo e seta a data que ele foi interrompido
+    setCycles(
+      cycles.map((cycle) => {
+        if (cycle.id === activeCycleId) {
+          return { ...cycle, interruptedDate: new Date() };
+        } else {
+          return cycle;
+        }
+      }),
+    );
+    setActiveCycleId(null);
   }
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
@@ -103,6 +118,7 @@ export const Home = () => {
             list="task-sugestion"
             type="text" 
             placeholder="Dê um nome para o seu projeto"
+            disabled={!!activeCycle}
             {...register('task')}
           />
 
@@ -120,6 +136,7 @@ export const Home = () => {
             step={5}
             min={5}
             max={60}
+            disabled={!!activeCycle}
             {...register('minutesAmount', { valueAsNumber: true, })}
           />
 
@@ -135,7 +152,7 @@ export const Home = () => {
         </CountDownContainer>
 
         {activeCycle ? (
-          <StopCountDownButton type="button" onClick={() => {}}>
+          <StopCountDownButton type="button" onClick={() => { handleInterruptCycle(); }}>
             <HandPalm size={24} />  
             Interromper
           </StopCountDownButton>
